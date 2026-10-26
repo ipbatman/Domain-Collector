@@ -8,6 +8,18 @@
   <div class="sort"><label for="sort">Сортировка</label><select id="sort"><option value="recent">Последние обращения</option><option value="count">Всего обращений</option><option value="name">По алфавиту</option></select></div>
   <p id="error" role="alert" hidden></p>
   <div id="list" aria-live="polite"></div>
-  <footer><div class="buttons"><button id="txt" disabled>TXT</button><button id="csv" disabled>CSV</button><button id="json" disabled>JSON</button><button id="clear" class="danger" disabled>Очистить</button></div><p>Основные страницы и фоновые запросы вкладок: API, CDN, скрипты, фреймы и WebSocket. Поддомены отдельно. Сохраняем только хосты и счётчики.</p></footer>
+  <footer>
+    <div class="buttons"><button id="txt" disabled>TXT</button><button id="csv" disabled>CSV</button><button id="json" disabled>JSON</button><button id="clear" class="danger" disabled>Очистить</button></div>
+    <p>Основные страницы и фоновые запросы вкладок: API, CDN, скрипты, фреймы и WebSocket. Поддомены отдельно. Сохраняем только хосты и счётчики.</p>
+    <section class="author" aria-label="Автор и поддержка проекта">
+      <p class="author-name">Автор: Илья Старков</p>
+      <div class="author-links">
+        <a href="mailto:ipbatman69@gmail.com">Написать автору</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://boosty.to/ipbatman" target="_blank" rel="noopener noreferrer">Поддержать проект <span aria-hidden="true">↗</span><span class="sr-only"> (откроется в новой вкладке)</span></a>
+      </div>
+      <a class="author-email" href="mailto:ipbatman69@gmail.com">ipbatman69@gmail.com</a>
+    </section>
+  </footer>
   <script src="popup.js"></script>
 </body></html>

@@ -87,7 +87,8 @@ chrome.webRequest.onBeforeRequest.addListener(details => {
 }, {urls: ['<all_urls>']});
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (sender.id !== chrome.runtime.id || sender.url !== chrome.runtime.getURL('popup.html')) return;
+  const popupUrl = chrome.runtime.getURL('popup.html');
+  if (sender.id !== chrome.runtime.id || ![popupUrl, popupUrl + '?view=expanded'].includes(sender.url)) return;
   void enqueue(async () => {
     if (message.type === 'snapshot') {
       const data = await chrome.storage.local.get(null);

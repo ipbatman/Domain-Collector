@@ -2,15 +2,17 @@
 <html lang="ru">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Мои домены</title><link rel="stylesheet" href="popup.css"></head>
 <body>
-  <header><span class="eyebrow">ЛОКАЛЬНЫЙ ЖУРНАЛ</span><h1>Мои домены</h1><p id="summary">Загрузка…</p></header>
-  <button id="pause" class="primary" disabled>Приостановить сбор</button>
+  <header>
+    <div class="header-row"><h1>Мои домены</h1><button id="pause" class="primary" disabled>Приостановить сбор</button></div>
+    <p id="summary">Загрузка…</p>
+  </header>
   <label for="search">Найти домен</label><input id="search" type="search" placeholder="Например, example.com" autocomplete="off">
-  <div class="sort"><label for="sort">Сортировка</label><select id="sort"><option value="recent">Последние обращения</option><option value="count">Всего обращений</option><option value="name">По алфавиту</option></select></div>
+  <div class="sort"><a id="expand" href="popup.html?view=expanded" target="_blank" rel="noopener">Развернуть список ↗</a><label class="sr-only" for="sort">Сортировка</label><select id="sort"><option value="recent">Последние обращения</option><option value="count">Всего обращений</option><option value="name">По алфавиту</option></select></div>
   <p id="error" role="alert" hidden></p>
   <div id="list" aria-live="polite"></div>
   <footer>
     <div class="buttons"><button id="txt" disabled>TXT</button><button id="csv" disabled>CSV</button><button id="json" disabled>JSON</button><button id="clear" class="danger" disabled>Очистить</button></div>
-    <p>Основные страницы и фоновые запросы вкладок: API, CDN, скрипты, фреймы и WebSocket. Поддомены отдельно. Сохраняем только хосты и счётчики.</p>
+    <details class="collection-info"><summary>Что учитывается</summary><p>Основные страницы и фоновые запросы вкладок: API, CDN, скрипты, фреймы и WebSocket. Поддомены отдельно. Сохраняем только хосты и счётчики.</p></details>
     <section class="author" aria-label="Автор и поддержка проекта">
       <p class="author-name">Автор: Илья Старков</p>
       <div class="author-links">

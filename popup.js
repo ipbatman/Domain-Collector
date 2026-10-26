@@ -1,4 +1,8 @@
 'use strict';
+if (new URLSearchParams(location.search).get('view') === 'expanded') {
+  document.documentElement.classList.add('expanded');
+  document.title = 'Мои домены — список';
+}
 const $ = id => document.getElementById(id);
 let records = [];
 let paused = false;
